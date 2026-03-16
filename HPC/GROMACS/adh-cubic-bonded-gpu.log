@@ -1,4 +1,4 @@
-mizu-bai@mizu-bai-X99:~/ADH/adh_cubic$ gmx mdrun -v -deffnm pme_verlet -ntmpi 1 -ntomp 24 -nb gpu -pme gpu -bonded gpu -update gpu -pin on
+$ gmx mdrun -v -deffnm pme_verlet -ntmpi 1 -ntomp 24 -nb gpu -pme gpu -bonded gpu -update gpu -pin on
                       :-) GROMACS - gmx mdrun, 2026.0 (-:
 
 Executable:   /opt/gromacs-2026.0-intel-oneapi-2025.3/bin/gmx

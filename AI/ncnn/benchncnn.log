@@ -1,0 +1,41 @@
+$ ../build/benchmark/benchncnn 4 1 0 0
+[0 Intel(R) Arc(tm) B580 Graphics (BMG G21)]  queueC=1[1]  queueT=2[1]
+[0 Intel(R) Arc(tm) B580 Graphics (BMG G21)]  fp16-p/s/u/a=1/1/1/1  int8-p/s/u/a=1/1/1/1  bf16-p/s=1/1
+[0 Intel(R) Arc(tm) B580 Graphics (BMG G21)]  subgroup=32(16~32)  ops=1/1/1/1/1/1/1/1/1/1
+[0 Intel(R) Arc(tm) B580 Graphics (BMG G21)]  fp16-cm=8x16x16  int8-cm=8x16x32  bf16-cm=8x16x16  fp8-cm=0
+[1 llvmpipe (LLVM 20.1.8, 256 bits)]  queueC=0[1]  queueT=0[1]
+[1 llvmpipe (LLVM 20.1.8, 256 bits)]  fp16-p/s/u/a=1/1/1/1  int8-p/s/u/a=1/1/1/1  bf16-p/s=1/0
+[1 llvmpipe (LLVM 20.1.8, 256 bits)]  subgroup=8(8~8)  ops=1/1/1/1/1/1/1/1/1/1
+[1 llvmpipe (LLVM 20.1.8, 256 bits)]  fp16-cm=0  int8-cm=0  bf16-cm=0  fp8-cm=0
+loop_count = 4
+num_threads = 1
+powersave = 0
+gpu_device = 0
+cooling_down = 1
+          squeezenet  min =    2.44  max =    2.51  avg =    2.46
+           mobilenet  min =    2.08  max =    2.17  avg =    2.13
+        mobilenet_v2  min =    3.18  max =    3.22  avg =    3.20
+        mobilenet_v3  min =    3.15  max =    3.30  avg =    3.25
+          shufflenet  min =    2.12  max =    2.29  avg =    2.18
+       shufflenet_v2  min =    3.61  max =    3.66  avg =    3.64
+             mnasnet  min =    3.10  max =    3.18  avg =    3.13
+     proxylessnasnet  min =    3.19  max =    3.26  avg =    3.23
+     efficientnet_b0  min =    4.79  max =    4.92  avg =    4.84
+   efficientnetv2_b0  min =   18.83  max =   18.90  avg =   18.87
+        regnety_400m  min =    3.99  max =    4.05  avg =    4.00
+           blazeface  min =    1.47  max =    1.53  avg =    1.50
+           googlenet  min =    7.19  max =    7.33  avg =    7.25
+            resnet18  min =    4.13  max =    4.60  avg =    4.41
+             alexnet  min =    2.30  max =    2.42  avg =    2.36
+               vgg16  min =    4.34  max =    4.65  avg =    4.51
+            resnet50  min =    4.51  max =    4.65  avg =    4.58
+      squeezenet_ssd  min =    8.28  max =    8.35  avg =    8.31
+       mobilenet_ssd  min =    5.99  max =    6.20  avg =    6.11
+      mobilenet_yolo  min =    5.29  max =    5.46  avg =    5.35
+  mobilenetv2_yolov3  min =    7.46  max =    7.67  avg =    7.59
+         yolov4-tiny  min =   13.22  max =   13.34  avg =   13.27
+           nanodet_m  min =    6.67  max =    6.88  avg =    6.79
+    yolo-fastest-1.1  min =    2.92  max =    3.14  avg =    3.00
+      yolo-fastestv2  min =    3.23  max =    3.46  avg =    3.36
+  vision_transformer  min =   26.89  max =   28.45  avg =   27.35
+          FastestDet  min =    3.13  max =    3.24  avg =    3.18

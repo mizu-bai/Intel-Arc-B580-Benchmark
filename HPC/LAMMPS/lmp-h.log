@@ -1,0 +1,115 @@
+$ lmp -h
+
+Large-scale Atomic/Molecular Massively Parallel Simulator - 22 Jul 2025 - Update 3
+
+Usage example: ./lmp -var t 300 -echo screen -in in.alloy
+
+List of command-line options supported by this LAMMPS executable:
+
+-echo none/screen/log/both  : echoing of input script (-e)
+-help                       : print this help message (-h)
+-in none/filename           : read input from file or stdin (default) (-i)
+-kokkos on/off ...          : turn KOKKOS mode on or off (-k)
+-log none/filename          : where to send log output (-l)
+-mdi '<mdi flags>'          : pass flags to the MolSSI Driver Interface
+-mpicolor color             : which exe in a multi-exe mpirun cmd (-m)
+-cite                       : select citation reminder style (-c)
+-nocite                     : disable citation reminder (-nc)
+-nonbuf                     : disable screen/logfile buffering (-nb)
+-package style ...          : invoke package command (-pk)
+-partition size1 size2 ...  : assign partition sizes (-p)
+-plog basename              : basename for partition logs (-pl)
+-pscreen basename           : basename for partition screens (-ps)
+-restart2data rfile dfile ... : convert restart to data file (-r2data)
+-restart2dump rfile dgroup dstyle dfile ... 
+                            : convert restart to dump file (-r2dump)
+-restart2info rfile         : print info about restart rfile (-r2info)
+-reorder topology-specs     : processor reordering (-r)
+-screen none/filename       : where to send screen output (-sc)
+-skiprun                    : skip loops in run and minimize (-sr)
+-suffix gpu/intel/kk/opt/omp: style suffix to apply (-sf)
+-var varname value          : set index style variable (-v)
+
+OS: Linux "Ubuntu 25.10" 6.17.0-19-generic x86_64
+
+Compiler: Intel LLVM C++ 202503.0 / Intel(R) oneAPI DPC++/C++ Compiler 2025.3.2 (2025.3.2.20260112) with OpenMP 5.1
+C++ standard: C++17
+Embedded fmt library version: 10.2.0
+Embedded JSON class version: 3.12.0
+
+MPI v4.1: Intel(R) MPI Library 2021.17 for Linux* OS
+
+
+Accelerator configuration:
+
+GPU package API: OpenCL
+GPU package precision: mixed
+KOKKOS package API: SYCL OpenMP Serial
+KOKKOS package precision: double
+Kokkos library version: 4.6.2
+OPENMP package API: OpenMP
+OPENMP package precision: double
+OpenMP standard: OpenMP 5.1
+
+Compatible GPU present: yes
+
+FFT information:
+
+
+...skipping 56 lines
+* Pair styles:
+
+adp             adp/kk          adp/omp         agni            agni/omp        
+aip/water/2dm   aip/water/2dm/opt               airebo          airebo/morse    
+airebo/morse/omp                airebo/omp      amoeba          amoeba/gpu      
+atm             beck            beck/gpu        beck/omp        body/nparticle  
+body/rounded/polygon            body/rounded/polyhedron         bop             
+born            born/coul/dsf   born/coul/dsf/cs                born/coul/long  
+born/coul/long/cs               born/coul/long/cs/gpu           
+born/coul/long/gpu              born/coul/long/omp              born/coul/msm   
+born/coul/msm/omp               born/coul/wolf  born/coul/wolf/cs               
+born/coul/wolf/cs/gpu           born/coul/wolf/gpu              
+born/coul/wolf/omp              born/gauss      born/gpu        born/omp        
+bpm/spring      brownian        brownian/kk     brownian/omp    brownian/poly   
+brownian/poly/omp               buck            buck6d/coul/gauss/dsf           
+buck6d/coul/gauss/long          buck/coul/cut   buck/coul/cut/gpu               
+buck/coul/cut/kk                buck/coul/cut/omp               buck/coul/long  
+buck/coul/long/cs               buck/coul/long/gpu              
+buck/coul/long/kk               buck/coul/long/omp              buck/coul/msm   
+buck/coul/msm/omp               buck/gpu        buck/kk         
+buck/long/coul/long             buck/long/coul/long/omp         buck/mdf        
+buck/omp        colloid         colloid/gpu     colloid/omp     comb            
+comb3           comb/omp        cosine/squared  coul/ctip       coul/cut        
+coul/cut/dielectric             coul/cut/global coul/cut/global/omp             
+coul/cut/gpu    coul/cut/kk     coul/cut/omp    coul/cut/soft   
+coul/cut/soft/omp               coul/debye      coul/debye/gpu  coul/debye/kk   
+coul/debye/omp  coul/diel       coul/diel/omp   coul/dsf        coul/dsf/gpu    
+coul/dsf/kk     coul/dsf/omp    coul/exclude    coul/long       coul/long/cs    
+coul/long/cs/gpu                coul/long/dielectric            coul/long/gpu   
+coul/long/kk    coul/long/omp   coul/long/soft  coul/long/soft/omp              
+coul/msm        coul/msm/omp    coul/shield     coul/slater/cut coul/slater/long                
+coul/slater/long/gpu            coul/streitz    coul/tt         coul/wolf       
+coul/wolf/cs    coul/wolf/kk    coul/wolf/omp   meam/c          reax            
+reax/c          mesont/tpm      dispersion/d3   dpd             
+dpd/coul/slater/long            dpd/coul/slater/long/gpu        dpd/ext         
+dpd/ext/kk      dpd/ext/omp     dpd/ext/tstat   dpd/ext/tstat/kk                
+dpd/ext/tstat/omp               dpd/fdt         dpd/fdt/energy  
+dpd/fdt/energy/kk               dpd/gpu         dpd/kk          dpd/omp         
+dpd/tstat       dpd/tstat/gpu   dpd/tstat/kk    dpd/tstat/omp   drip            
+dsmc            e3b             eam             eam/alloy       eam/alloy/gpu   
+eam/alloy/kk    eam/alloy/omp   eam/alloy/opt   eam/cd          eam/cd/old      
+eam/fs          eam/fs/gpu      eam/fs/kk       eam/fs/omp      eam/fs/opt      
+eam/gpu         eam/he          eam/kk          eam/omp         eam/opt         
+edip            edip/multi      edip/omp        edpd            edpd/gpu        
+eff/cut         eim             eim/omp         exp6/rx         exp6/rx/kk      
+extep           gauss           gauss/cut       gauss/cut/omp   gauss/gpu       
+gauss/omp       gayberne        gayberne/gpu    gayberne/omp    
+gran/hertz/history              gran/hertz/history/omp          gran/hooke      
+gran/hooke/history              gran/hooke/history/kk           
+gran/hooke/history/omp          gran/hooke/omp  granular        gw              
+gw/zbl          harmonic/cut    harmonic/cut/omp                
+hbond/dreiding/lj               hbond/dreiding/lj/angleoffset   
+hbond/dreiding/lj/angleoffset/omp               hbond/dreiding/lj/omp           
+hbond/dreiding/morse            hbond/dreiding/morse/angleoffset                
+hbond/dreiding/morse/angleoffset/omp            hbond/dreiding/morse/omp        
+hippo           hippo/gpu       hybrid          hybrid/omp      hybrid/kk       

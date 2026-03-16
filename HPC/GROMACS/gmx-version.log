@@ -1,4 +1,4 @@
-gmx --version
+$ gmx --version
                          :-) GROMACS - gmx, 2026.0 (-:
 
 Executable:   /opt/gromacs-2026.0-intel-oneapi-2025.3/bin/gmx
