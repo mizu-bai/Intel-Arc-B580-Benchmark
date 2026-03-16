@@ -291,12 +291,18 @@ copy-d2d     = 196.05 GBPS
 
 Ref. [Amber20 SYCL version for Intel GPU Max Series](https://ambermd.org/GPUSupport.php)
 
-PME STMV NPT 4fs, `16.60 ns/day` for `mdin.GPU` and `12.20 ns/day` for `mdinOPT.GPU`, huh...
+PME STMV NPT 4fs with
+
+```sh
+$ pmemd.sycl -O -i mdin[OPT].GPU -o mdout[OPT].GPU -p /path/to/STMV/prmtop -c /path/to/STMV/inpcrd
+```
+
+`16.60 ns/day` for `mdin.GPU` and `12.20 ns/day` for `mdinOPT.GPU`, huh...
 
 ### GROMACS 2026.0
 
-```
-gmx --version
+```sh
+$ gmx --version
                          :-) GROMACS - gmx, 2026.0 (-:
 
 Executable:   /opt/gromacs-2026.0-intel-oneapi-2025.3/bin/gmx
@@ -338,9 +344,12 @@ SYCL linker flags:   -fsycl -fsycl-device-code-split=per_kernel -ftarget-registe
 
 Remember to build with option `-DGMX_GPU_NB_CLUSTER_SIZE=8`
 
-ADH Cubic
+Run ADH Cubic with
 
-Command `gmx mdrun -v -deffnm pme_verlet -ntmpi 1 -ntomp 24 -nb gpu -pme gpu -bonded [cpu|gpu] -update gpu -pin on`, `132.274 ns/day` for bonded cpu and `144.212 ns/day` for bonded gpu.
+```sh
+$ gmx mdrun -v -deffnm pme_verlet -ntmpi 1 -ntomp 24 -nb gpu -pme gpu -bonded [cpu|gpu] -update gpu -pin on
+```
+
+`132.274 ns/day` for bonded cpu and `144.212 ns/day` for bonded gpu.
 
 ### LAMMPS
-
