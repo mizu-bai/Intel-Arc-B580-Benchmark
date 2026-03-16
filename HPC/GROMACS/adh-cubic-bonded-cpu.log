@@ -1,0 +1,38 @@
+mizu-bai@mizu-bai-X99:~/ADH/adh_cubic$ gmx mdrun -v -deffnm pme_verlet -ntmpi 1 -ntomp 24 -nb gpu -pme gpu -bonded cpu -update gpu -pin on
+                      :-) GROMACS - gmx mdrun, 2026.0 (-:
+
+Executable:   /opt/gromacs-2026.0-intel-oneapi-2025.3/bin/gmx
+Data prefix:  /opt/gromacs-2026.0-intel-oneapi-2025.3
+Working dir:  /home/mizu-bai/ADH/adh_cubic
+Command line:
+  gmx mdrun -v -deffnm pme_verlet -ntmpi 1 -ntomp 24 -nb gpu -pme gpu -bonded cpu -update gpu -pin on
+
+
+Back Off! I just backed up pme_verlet.log to ./#pme_verlet.log.1#
+Reading file pme_verlet.tpr, VERSION 2026.0 (single precision)
+Changing nstlist from 10 to 80, rlist from 0.903 to 1.064
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:1,PME:1
+PP tasks will do non-perturbed short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+Using 24 OpenMP threads 
+
+
+Back Off! I just backed up pme_verlet.edr to ./#pme_verlet.edr.1#
+starting mdrun 'NADP-DEPENDENT ALCOHOL DEHYDROGENASE in water'
+100000 steps,    200.0 ps.
+step 99900, remaining wall clock time:     0 s          
+Writing final coordinates.
+
+Back Off! I just backed up pme_verlet.gro to ./#pme_verlet.gro.1#
+step 100000, remaining wall clock time:     0 s          
+               Core t (s)   Wall t (s)        (%)
+       Time:     3134.776      130.639     2399.6
+                 (ns/day)    (hour/ns)    (ms/step)  (Matom*steps/s) 
+Performance:      132.274        0.181        1.306          102.709 
+
+GROMACS reminds you: "It's more useful when you know what you're doing." (Artem Zhmurov)

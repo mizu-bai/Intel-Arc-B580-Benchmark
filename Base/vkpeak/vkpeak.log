@@ -1,0 +1,35 @@
+device       = Intel(R) Arc(tm) B580 Graphics (BMG G21)
+driver       = Intel open-source Mesa driver / Mesa 25.2.8-0ubuntu0.25.10.1
+
+fp32-scalar  = 13721.04 GFLOPS
+fp32-vec4    = 9330.86 GFLOPS
+
+fp16-scalar  = 26528.37 GFLOPS
+fp16-vec4    = 24553.08 GFLOPS
+fp16-matrix  = 116489.10 GFLOPS
+
+fp64-scalar  = 800.93 GFLOPS
+fp64-vec4    = 777.89 GFLOPS
+
+int32-scalar = 3426.37 GIOPS
+int32-vec4   = 3504.60 GIOPS
+
+int16-scalar = 12615.97 GIOPS
+int16-vec4   = 13300.78 GIOPS
+
+int64-scalar = 668.57 GIOPS
+int64-vec4   = 573.30 GIOPS
+
+int8-dotprod = 49103.85 GIOPS
+int8-matrix  = 231778.80 GIOPS
+
+bf16-dotprod = 9883.26 GFLOPS
+bf16-matrix  = 116411.28 GFLOPS
+
+fp8-matrix   = 0.00 GFLOPS
+bf8-matrix   = 0.00 GFLOPS
+
+copy-h2h     = 9.79 GBPS
+copy-h2d     = 9.80 GBPS
+copy-d2h     = 10.13 GBPS
+copy-d2d     = 196.05 GBPS
